@@ -44,6 +44,7 @@ html,body{
 #stalker.active {
     transform: scale(3);
 }
+
 /*---------------
 　header
 ----------------*/
@@ -73,7 +74,17 @@ ul,li{
     text-align: center;
     position: relative;
     top: 230px;
+
+    opacity: 0;
+    transition: all .5s ease;
+    transform: translate(0, 100px);
 }
+
+.top.show {
+    opacity: 1;
+    transform: none;
+}
+
 .top p{
     z-index: 1;
     text-align: center;
@@ -96,6 +107,7 @@ ul,li{
     background-color: #1a1a1a;
     border-radius: 30px;
 }
+
 .about_title{
     color: blue;
     font-family: 'Poiret One', cursive;
@@ -171,7 +183,7 @@ ul,li{
 .works_title{
     color: blue;
     font-family: 'Poiret One', cursive;
-    font-size: 30px;
+    font-size: 40px;
     margin-left: 40px;
 }
 

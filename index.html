@@ -8,10 +8,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
 
         <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
-        <script type="text/javascript"
-        src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
-        </script>
-        <script type-"text/javascript">
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script>
         if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
             $(function(){
                 var body = document.body;
@@ -39,6 +38,19 @@
                 });
             });
 }
+        </script>
+        
+        <script>
+        $(function(){
+            $('a[href^="#"]').click(function(){
+              var speed = 500;
+              var href= $(this).attr("href");
+              var target = $(href == "#" || href == "" ? 'html' : href);
+              var position = target.offset().top;
+              $("html, body").animate({scrollTop:position}, speed, "swing");
+              return false;
+            });
+          });
         </script>
 
     </head>
@@ -147,5 +159,19 @@
         <footer>
             <p>©2019 Nacchan</p>
         </footer>
+
+        <script>
+                var scrollAnimationElm = document.querySelectorAll('.top');
+                var scrollAnimationFunc = function() {
+                for(var i = 0; i < scrollAnimationElm.length; i++) {
+                    var triggerMargin = 200;
+                    if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+                    scrollAnimationElm[i].classList.add('show');
+                    }
+                }
+                }
+                window.addEventListener('load', scrollAnimationFunc);
+                window.addEventListener('scroll', scrollAnimationFunc);
+                </script>
     </body>
 </html>
