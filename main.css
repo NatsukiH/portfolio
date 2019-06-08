@@ -91,16 +91,63 @@ ul,li{
 /*---------------
 　ABOUT
 ----------------*/
+.about{
+    margin: auto 10px;
+}
+.about_title{
+    color: blue;
+    font-family: 'Poiret One', cursive;
+    font-size: 40px;
+    margin-left: 40px;
+}
 
+.about_text{
+    width: 50%;
+    float: left;
+    color: #b3d2ff;
+    text-align: center;
+}
+
+.icon{
+    width: 50%;
+    float: right;
+    text-align: center;
+}
+
+.icon img{
+    border-radius: 80%;
+}
 /*---------------
 　SKILLS
 ----------------*/
+.skills_title{
+    color: blue;
+    font-family: 'Poiret One', cursive;
+    font-size: 40px;
+    margin-left: 40px;
+}
 /*---------------
 　WORKS
 ----------------*/
+.works_title{
+    color: blue;
+    font-family: 'Poiret One', cursive;
+    font-size: 40px;
+    margin-left: 40px;
+}
 /*---------------
 　CONTACT
 ----------------*/
+.contact_title{
+    color: blue;
+    font-family: 'Poiret One', cursive;
+    font-size: 40px;
+    margin-left: 40px;
+}
 /*---------------
 　フッター
 ----------------*/
+footer p{
+    color: blue;
+    text-align: center;
+}
