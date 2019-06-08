@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Natsuki Hashimoto Portfolio</title>
+        <link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+        <script type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+        </script>
+        <script type-"text/javascript">
+        if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
+            $(function(){
+                var body = document.body;
+                var cursor = document.createElement("div");
+                var stalker = document.createElement("div");
+                cursor.id = "cursor";
+                stalker.id = "stalker";
+                body.appendChild(cursor);
+                body.appendChild(stalker);
+                body.addEventListener("mousemove", function(e) {
+                    cursor.style.left = e.clientX + "px";
+                    cursor.style.top = e.clientY + "px";
+                    stalker.style.left = e.clientX + "px";
+                    stalker.style.top = e.clientY + "px";
+                }, false);
+        
+                $("a").on("mouseenter", function() {
+                    $('#cursor').addClass("active");
+                    $('#stalker').addClass("active");
+                });
+        
+                $("a").on("mouseleave", function() {
+                    $('#cursor').removeClass("active");
+                    $('#stalker').removeClass("active");
+                });
+            });
+}
+        </script>
+
+    </head>
+    <body>            
+        <header>
+            <div class="top">
+                <p>Hashomoto Natsuki</p>
+                <p>-Portfolio site-</p>
+            </div>
+            <div class="menu">
+                <ul>
+                    <a href="#move_about"><li>ABOUT</li></a>
+                    <li>|</li>
+                    <a href="#move_skills"><li>SKILLS</li></a>
+                    <li>|</li>
+                    <a href="#move_works"><li>WORKS</li></a>
+                    <li>|</li>
+                    <a href="#move_contact"><li>CONTACT</li></a>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <div id="move_about"></div>
+            <div class="about">
+                <div class="about_title">
+                    <p>ABOUT</p>
+                </div>
+                <div class="about_text">
+                    <p>橋本夏希です。</p>
+                    <p>1998/07/27生まれの同志社大学理工学部インテリジェント情報工学科3年生。</p>
+                    <p>同志社大学ローム記念館プロジェクトのProntiatVRのWeb班に所属。</p>
+                    <p>WebとUXについて勉強中。</p>
+                    <p>趣味はスイーツめぐり。</p>
+                </div>
+                <div class="icon">
+                    <image src=""></image>
+                </div>
+            </div>
+            <div id="move_skills"></div>
+            <div class="skills">
+                <div class="skills_title">
+                    <p>SKILLS</p>
+                 </div>
+                <div class="language1">
+                    <p>C : ★★★</p>
+                    <p>Java : ★★</p>
+                    <p>Python : ★</p>
+                </div>
+                <div class="language2">
+                    <p>HTML : ★★★</p>
+                    <p>CSS : ★★★</p>
+                    <p>JavaScript : ★</p>
+                </div>
+                <div class="others">
+                    <p>TOEIC : </p>
+                    <p>英検 : 2級</p>
+                </div>
+            </div>
+            <div id="move_works"></div>
+            <div class="works_title">
+                    <p>WORKS</p>
+            </div>
+            <div class="works">
+                <div class="co2buster">
+                    <p>CO2 BUSTER</p>
+                    <p>あああああああああああああああああああああああああああああああ</p>
+                </div>
+                <div class="magiccombat">
+                    <p>Magic Combat VR</p>
+                    <p>あああああああああああああああああああああああああああああああ</p>
+                </div>
+            </div>
+            <div id="move_contact"></div>
+            <div class="contact">
+                <div class="contact_title">
+                    <p>CONTACT</p>
+                </div>
+                <p>Gmail : natsuki.h727@gmail.com</p>
+            </div>
+        </main>
+        <footer>
+            <p>©2019 Nacchan</p>
+        </footer>
+
+        <script>
+            
+        </script>
+    </body>
+</html>

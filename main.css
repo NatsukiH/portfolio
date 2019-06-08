@@ -1,0 +1,106 @@
+/*---------------
+　全体
+----------------*/
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: black;
+    
+}
+/*-------カーソル--------*/
+#cursor {
+    position: fixed;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    pointer-events: none;
+}
+ 
+#cursor.active {
+    transform: scale(0);
+}
+ 
+#stalker {
+    position: fixed;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    transition: 0.2s;
+    opacity: .3;
+    pointer-events: none;
+}
+ 
+#stalker.active {
+    transform: scale(3);
+}
+/*---------------
+　header
+----------------*/
+header{
+    height: 600px;
+    background-image: url("images/4697_4.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.menu{
+    float: right;
+    position: relative;
+    top: 400px;
+    margin-right: 20px;
+}
+header a, li{
+    float: left;
+}
+
+ul,li{
+    list-style: none;
+    margin: 0;
+    margin-left: 30px;
+    color: blue;
+    font-family: 'Poiret One', cursive;
+    font-size: 20px;
+}
+
+.top{
+    text-align: center;
+    position: relative;
+    top: 230px;
+}
+.top p{
+    z-index: 1;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    color: blue;
+    font-family: 'Poiret One', cursive;
+    font-size: 40px;
+}
+
+.clear{
+    clear: both;
+}
+
+/*---------------
+　ABOUT
+----------------*/
+
+/*---------------
+　SKILLS
+----------------*/
+/*---------------
+　WORKS
+----------------*/
+/*---------------
+　CONTACT
+----------------*/
+/*---------------
+　フッター
+----------------*/
