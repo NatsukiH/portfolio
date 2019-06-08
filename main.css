@@ -66,7 +66,7 @@ ul,li{
     margin-left: 30px;
     color: blue;
     font-family: 'Poiret One', cursive;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .top{
@@ -92,7 +92,9 @@ ul,li{
 　ABOUT
 ----------------*/
 .about{
-    margin: auto 10px;
+    margin: 30px;
+    background-color: #1a1a1a;
+    border-radius: 30px;
 }
 .about_title{
     color: blue;
@@ -104,7 +106,7 @@ ul,li{
 .about_text{
     width: 50%;
     float: left;
-    color: #b3d2ff;
+    color: #e6ffff;
     text-align: center;
 }
 
@@ -120,15 +122,44 @@ ul,li{
 /*---------------
 　SKILLS
 ----------------*/
+.skills{
+    margin: 30px;
+    background-color: #1a1a1a;
+    border-radius: 30px;
+}
 .skills_title{
     color: blue;
     font-family: 'Poiret One', cursive;
     font-size: 40px;
     margin-left: 40px;
 }
+.language1{
+    float: left;
+    width: 33%;
+    color: #e6ffff;
+    text-align: center;
+}
+.language2{
+    float: right;
+    width: 33%;
+    color: #e6ffff;
+    text-align: center;
+}
+.others{
+    float: right;
+    width: 33%;
+    color: #e6ffff;
+    text-align: center;
+}
+
 /*---------------
 　WORKS
 ----------------*/
+.works{
+    margin: 30px;
+    background-color: #1a1a1a;
+    border-radius: 30px;
+}
 .works_title{
     color: blue;
     font-family: 'Poiret One', cursive;
@@ -138,6 +169,11 @@ ul,li{
 /*---------------
 　CONTACT
 ----------------*/
+.contact{
+    margin: 30px;
+    background-color: #1a1a1a;
+    border-radius: 30px;
+}
 .contact_title{
     color: blue;
     font-family: 'Poiret One', cursive;
