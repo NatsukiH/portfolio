@@ -7,13 +7,17 @@ html,body{
     margin: 0;
     background-color: black;
     
+    background-image: url("images/4697_4.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 /*-------カーソル--------*/
 #cursor {
     position: fixed;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    background: #fff;
+    background: #0018ec;
     width: 5px;
     height: 5px;
     border-radius: 100%;
@@ -28,7 +32,7 @@ html,body{
     position: fixed;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    background: #fff;
+    background: #0018ec;
     width: 40px;
     height: 40px;
     border-radius: 100%;
@@ -45,10 +49,6 @@ html,body{
 ----------------*/
 header{
     height: 600px;
-    background-image: url("images/4697_4.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
 }
 .menu{
     float: right;
@@ -110,6 +110,12 @@ ul,li{
     text-align: center;
 }
 
+.name {
+    background: linear-gradient(transparent 70%, blue 50%);
+  }
+.star{
+    color: blue;
+}
 .icon{
     width: 50%;
     float: right;
@@ -118,6 +124,8 @@ ul,li{
 
 .icon img{
     border-radius: 80%;
+    display: inline-block;
+    box-shadow: 0px 0px 20px -5px rgba(152, 152, 247, 0.8);
 }
 /*---------------
 　SKILLS
@@ -163,8 +171,34 @@ ul,li{
 .works_title{
     color: blue;
     font-family: 'Poiret One', cursive;
-    font-size: 40px;
+    font-size: 30px;
     margin-left: 40px;
+}
+
+.co2buster{
+    float: left;
+    width: 40%;
+    color: #e6ffff;
+    text-align: center;
+}
+
+.magiccombat{
+    float: right;
+    width: 40%;
+    color: #e6ffff;
+    text-align: center;
+}
+
+.web_title{
+    font-size: 20px;
+}
+
+.co2buster img{
+    width: 90%;
+}
+
+.magiccombat img{
+    width: 90%;
 }
 /*---------------
 　CONTACT
@@ -179,6 +213,19 @@ ul,li{
     font-family: 'Poiret One', cursive;
     font-size: 40px;
     margin-left: 40px;
+}
+
+.mail_icon{
+    color: blue;
+    font-size: 2.5em;
+}
+.mail p{
+    font-size: 18px;
+    margin: 20px;
+    line-height: 18px;
+}
+.address{
+    color: #e6ffff;
 }
 /*---------------
 　フッター
