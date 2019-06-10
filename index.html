@@ -9,6 +9,8 @@
 
         <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
 
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+
         <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
         <script>
         if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
@@ -53,10 +55,38 @@
           });
         </script>
 
+        <script>
+        $(function() {
+            var appear = false;
+            var pagetop = $('#page_top');
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {  //100pxスクロールしたら
+                if (appear == false) {
+                    appear = true;
+                    pagetop.stop().animate({
+                    'right': '0px' //右から0pxの位置に
+                    }, 300); //0.3秒かけて現れる
+                }
+                } else {
+                if (appear) {
+                    appear = false;
+                    pagetop.stop().animate({
+                    'right': '-50px' //右から-50pxの位置に
+                    }, 300); //0.3秒かけて隠れる
+                }
+                }
+            });
+            pagetop.click(function () {
+                $('body, html').animate({ scrollTop: 0 }, 500); //0.5秒かけてトップへ戻る
+                return false;
+            });
+            });
+        </script>
     </head>
     <body>            
         <header>
-            <div class="top">
+            <div id="page_top"><a href="#"></a></div>
+            <div class="top schroll">
                 <p>Hashomoto Natsuki</p>
                 <p>-Portfolio site-</p>
             </div>
@@ -75,7 +105,7 @@
         </header>
         <main>
             <div id="move_about"></div>
-            <div class="about">
+            <div class="about schroll">
                 <div class="about_title">
                     <p>ABOUT</p>
                 </div>
@@ -83,6 +113,7 @@
                     <p><span class="star">*★</span>　<span class="name">橋本 夏希 ~Hashimoto Nastuki~</span>　<span class="star">★*</span></p>
                     <p>同志社大学理工学部インテリジェント情報工学科3年生。</p>
                     <p>同志社大学ローム記念館プロジェクトのProntiatVRのWeb班に所属。</p>
+                    <div id="move_skills"></div>
                     <p>WebとUXについて勉強中。</p>
                     <p>趣味はスイーツめぐり。</p>
                 </div>
@@ -91,8 +122,8 @@
                 </div>
                 <div class="clear"></div>
             </div>
-            <div id="move_skills"></div>
-            <div class="skills">
+            
+            <div class="skills schroll">
                 <div class="skills_title">
                     <p>SKILLS</p>
                  </div>
@@ -114,7 +145,7 @@
                 <div class="clear"></div>
             </div>
             <div id="move_works"></div>
-            <div class="works">
+            <div class="works schroll">
                 <div class="works_title">
                     <p>WORKS</p>
                 </div>
@@ -122,7 +153,7 @@
                     <div class="web_title">
                         <p>CO2 BUSTERのHP</p>
                     </div>
-                    <a href="https://natsukih.github.io/hackathon_a/">https://natsukih.github.io/hackathon_a/</a>
+                    <a href="https://natsukih.github.io/hackathon_a/">リンクはこちら</a><p></p>
                     <div class="co2buster_img">
                         <image src="images/co2buster.png"></image>
                     </div>
@@ -134,7 +165,7 @@
                     <div class="web_title">
                         <p>Magic Combat VRのHP</p>
                     </div>
-                    <a href="https://natsukih.github.io/magiccombat/"> https://natsukih.github.io/magiccombat/</a>
+                    <a href="https://natsukih.github.io/magiccombat/">リンクはこちら</a><p></p>
                     <div class="magiccombat_img">
                         <image src="images/magiccombat.png"></image>
                     </div>
@@ -145,7 +176,7 @@
                 <div class="clear"></div>
             </div>
             <div id="move_contact"></div>
-            <div class="contact">
+            <div class="contact schroll">
                 <div class="contact_title">
                     <p>CONTACT</p>
                 </div>
@@ -161,10 +192,10 @@
         </footer>
 
         <script>
-                var scrollAnimationElm = document.querySelectorAll('.top');
+                var scrollAnimationElm = document.querySelectorAll('.schroll');
                 var scrollAnimationFunc = function() {
                 for(var i = 0; i < scrollAnimationElm.length; i++) {
-                    var triggerMargin = 200;
+                    var triggerMargin = 100;
                     if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
                     scrollAnimationElm[i].classList.add('show');
                     }
