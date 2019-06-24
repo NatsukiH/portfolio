@@ -1,3 +1,6 @@
+/* PC用CSS */
+@media print, screen and (min-width: 640px) {
+
 /*---------------
 　全体
 ----------------*/
@@ -60,8 +63,8 @@ html,body{
 
 /*-----------トップへ戻る------------*/
 #page_top{
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     position: fixed;
     right: 0;
     bottom: 0;
@@ -72,18 +75,18 @@ html,body{
   #page_top a{
     position: relative;
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     text-decoration: none;
   }
   #page_top a::before{
     font-family: FontAwesome;
     content: '\f102';
-    font-size: 25px;
+    font-size: 35px;
     color: #fff;
     position: absolute;
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     top: 0;
     bottom: 0;
     right: 0;
@@ -96,6 +99,10 @@ html,body{
 ----------------*/
 header{
     height: 600px;
+}
+
+.mobile_menu{
+    display: none;
 }
 .menu{
     float: right;
@@ -121,8 +128,6 @@ ul,li{
     text-align: center;
     position: relative;
     top: 230px;
-
-    
 }
 
 .top p{
@@ -245,6 +250,10 @@ ul,li{
     font-size: 20px;
 }
 
+.web_name{
+    background: linear-gradient(transparent 70%, blue 90%);
+}
+
 .co2buster img{
     width: 90%;
 }
@@ -287,4 +296,5 @@ ul,li{
 footer p{
     color: blue;
     text-align: center;
+}
 }

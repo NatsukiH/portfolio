@@ -1,0 +1,361 @@
+/* スマートフォン用CSS */
+@media screen and (max-width: 640px) {
+ 
+img{
+    max-width: 100%;
+    height: auto;
+    width /***/:auto;
+}
+
+/*---------------
+　全体
+----------------*/
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: black;
+    
+    background-image: url("images/4697_4.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/*--------ふわっと出現----------*/
+
+.schroll{
+    opacity: 0;
+    transition: all .5s ease;
+    transform: translate(0, 100px);
+}
+
+.schroll.show {
+    opacity: 1;
+    transform: none;
+}
+
+/*-----------トップへ戻る------------*/
+#page_top{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background: #3f98ef;
+    opacity: 0.6;
+    border-radius: 50%;
+  }
+  #page_top a{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+  }
+  #page_top a::before{
+    font-family: FontAwesome;
+    content: '\f102';
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
+/*---------------
+　header
+----------------*/
+header{
+    height: 600px;
+}
+.menu{
+    display: none;
+}
+/*ナビメニューのスタイルを指定*/
+nav.NavMenu{
+    position: fixed; /*表示位置を固定*/
+    z-index: 2; /*重ね順を変更*/
+    top: 0; /*表示位置を指定*/
+    left: 0; /*表示位置を指定*/
+    text-align: center; /*テキストを中央揃え*/
+    width: 100%; /*全幅表示*/
+    transform: translateY(-100%); /*ナビを上に隠す*/
+    transition: all 0.6s; /*アニメーションの時間を指定*/
+}
+    
+nav.NavMenu ul{
+    background: rgba(0, 0, 146, 0.9); /*背景をグレーにする*/
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+    
+nav.NavMenu ul li{
+    font-size: 1.1em;
+    font-family: 'Poiret One', cursive;
+    color: #000;
+    font-weight: bold;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    height: 40px;
+    border: 1px dotted #000;
+    line-height: 40px;
+}
+    
+nav.NavMenu ul li:last-child{
+    padding-bottom: 0;
+    border-bottom: none; /*最後のメニュー項目のみ下線を消す*/
+}
+    
+nav.NavMenu ul li a{
+    display: block; /*クリックできる領域を広げる*/
+    color: #000;
+    padding: 1em 0;
+}
+a{
+    text-decoration: none;
+}
+/*トグルボタンが押されたときに付与するクラス*/
+nav.NavMenu.active{
+    transform: translateY(0%);
+}
+
+/*トグルボタンのスタイルを指定*/
+.Toggle {
+    display: block;
+    position: fixed;    /* bodyに対しての絶対位置指定 */
+    right: 13px;
+    top: 12px;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    z-index: 3;
+}
+ 
+.Toggle span {
+    display: block;
+    position: absolute;
+    width: 30px;
+    border-bottom: solid 3px rgb(0, 3, 175);
+    -webkit-transition: .35s ease-in-out;	/*変化の速度を指定*/
+    -moz-transition: .35s ease-in-out;		/*変化の速度を指定*/
+    transition: .35s ease-in-out;			/*変化の速度を指定*/
+    left: 6px;
+}
+ 
+.Toggle span:nth-child(1) {
+    top: 9px;
+}
+ 
+.Toggle span:nth-child(2) {
+    top: 18px;
+}
+ 
+.Toggle span:nth-child(3) {
+    top: 27px;
+}
+ 
+/* 最初のspanをマイナス45度に */
+
+.Toggle.active span:nth-child(1) {
+    top: 18px;
+    left: 6px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* 2番目と3番目のspanを45度に */
+.Toggle.active span:nth-child(2),
+.Toggle.active span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+} 
+
+.top{
+    text-align: center;
+    position: relative;
+    top: 230px;
+
+    
+}
+
+.top p{
+    z-index: 1;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    color: blue;
+    font-family: 'Poiret One', cursive;
+    font-size: 40px;
+}
+
+.clear{
+    clear: both;
+}
+
+/*---------------
+　ABOUT
+----------------*/
+.about{
+    margin: 30px;
+    background-color: #1a1a1a;
+    border-radius: 30px;
+}
+
+.about_title{
+    color: blue;
+    font-family: 'Poiret One', cursive;
+    font-size: 40px;
+    margin-left: 40px;
+}
+
+.about_text{
+    width: 50%;
+    float: left;
+    color: #e6ffff;
+    text-align: center;
+}
+
+.name {
+    background: linear-gradient(transparent 70%, blue 50%);
+  }
+.star{
+    color: blue;
+}
+.icon{
+    width: 50%;
+    float: right;
+    text-align: center;
+}
+
+.icon img{
+    border-radius: 80%;
+    display: inline-block;
+    box-shadow: 0px 0px 20px -5px rgba(152, 152, 247, 0.8);
+}
+/*---------------
+　SKILLS
+----------------*/
+.skills{
+    margin: 30px;
+    background-color: #1a1a1a;
+    border-radius: 30px;
+}
+.skills_title{
+    color: blue;
+    font-family: 'Poiret One', cursive;
+    font-size: 40px;
+    margin-left: 40px;
+}
+.language1{
+    float: left;
+    width: 33%;
+    color: #e6ffff;
+    text-align: center;
+}
+.language2{
+    float: right;
+    width: 33%;
+    color: #e6ffff;
+    text-align: center;
+}
+.others{
+    float: right;
+    width: 33%;
+    color: #e6ffff;
+    text-align: center;
+}
+
+/*---------------
+　WORKS
+----------------*/
+.works{
+    margin: 30px;
+    background-color: #1a1a1a;
+    border-radius: 30px;
+}
+.works_title{
+    color: blue;
+    font-family: 'Poiret One', cursive;
+    font-size: 40px;
+    margin-left: 40px;
+}
+
+.co2buster{
+    float: none;
+    width: 100%;
+    color: #e6ffff;
+    text-align: center;
+}
+
+.magiccombat{
+    float: none;
+    width: 100%;
+    color: #e6ffff;
+    text-align: center;
+}
+
+.web_title{
+    font-size: 20px;
+}
+
+.web_name{
+    background: linear-gradient(transparent 70%, blue 90%);
+}
+
+.co2buster img{
+    width: 90%;
+}
+
+.magiccombat img{
+    width: 90%;
+}
+
+
+/*---------------
+　CONTACT
+----------------*/
+.contact{
+    margin: 30px;
+    background-color: #1a1a1a;
+    border-radius: 30px;
+}
+.contact_title{
+    color: blue;
+    font-family: 'Poiret One', cursive;
+    font-size: 40px;
+    margin-left: 40px;
+}
+
+.mail_icon{
+    color: blue;
+    font-size: 2.5em;
+}
+.mail p{
+    font-size: 18px;
+    margin: 20px;
+    line-height: 18px;
+}
+.address{
+    color: #e6ffff;
+}
+/*---------------
+　フッター
+----------------*/
+footer p{
+    color: blue;
+    text-align: center;
+}
+
+}
